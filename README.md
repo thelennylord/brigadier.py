@@ -2,12 +2,16 @@
 Implementation of [Mojang/brigadier](https://github.com/Mojang/brigadier) in Python.
 
 ## Installing
-------------
 **Requires Python 3.7 or higher**
+```sh
+# For Windows
+py -3 -m pip install brigadier.py
+
+# For linux or macOS
+python3 -m pip install brigadier.py
+```
 
 ## Examples
------------
-
 ### Registering a simple command
 ```py
 from brigadier import CommandDispatcher
@@ -89,5 +93,4 @@ dispatcher.execute("teleport 24 51 -632", {})
 ```
 
 ## License
---------
 [MIT](https://github.com/thelennylord/brigadier.py/blob/master/LICENSE)
