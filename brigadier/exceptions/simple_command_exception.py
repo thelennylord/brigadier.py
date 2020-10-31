@@ -1,4 +1,4 @@
-from .CommandSyntaxException import CommandSyntaxException
+from .command_syntax_exception import CommandSyntaxException
 
 
 class SimpleCommandExceptionType:

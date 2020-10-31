@@ -128,7 +128,7 @@ class CommandNode:
             return self.arguments.values()
     
     def __lt__(self, obj):
-        from brigadier.tree.LiteralCommandNode import LiteralCommandNode
+        from brigadier.tree.literal_command_node import LiteralCommandNode
 
         if isinstance(self, LiteralCommandNode) == isinstance(obj, LiteralCommandNode):
             return self.get_sorted_keys() < obj.get_sorted_keys()

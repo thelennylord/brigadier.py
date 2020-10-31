@@ -1,6 +1,6 @@
 from brigadier.tree import ArgumentCommandNode
 
-from .ArgumentBuilder import ArgumentBuilder
+from .argument_builder import ArgumentBuilder
 
 
 class RequiredArgumentBuilder(ArgumentBuilder):

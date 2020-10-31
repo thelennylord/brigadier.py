@@ -1,8 +1,8 @@
-from brigadier.context.StringRange import between
+from brigadier.context.string_range import between
 
-from .IntegerSuggestion import IntegerSuggestion
-from .Suggestion import Suggestion
-from .Suggestions import create_suggestion
+from .integer_suggestion import IntegerSuggestion
+from .suggestion import Suggestion
+from .suggestions import create_suggestion
 
 
 class SuggestionsBuilder:

@@ -1,7 +1,7 @@
-from .CommandContext import CommandContext
-from .ParsedCommandNode import ParsedCommandNode
-from .StringRange import at, encompassing
-from .SuggestionContext import SuggestionContext
+from .command_context import CommandContext
+from .parsed_command_node import ParsedCommandNode
+from .string_range import at, encompassing
+from .suggestion_context import SuggestionContext
 
 
 class CommandContextBuilder:

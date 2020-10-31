@@ -1,6 +1,6 @@
 import functools
 
-from .Suggestion import Suggestion
+from .suggestion import Suggestion
 
 
 @functools.total_ordering

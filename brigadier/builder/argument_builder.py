@@ -1,4 +1,4 @@
-from brigadier.tree.RootCommandNode import RootCommandNode
+from brigadier.tree.root_command_node import RootCommandNode
 
 
 class ArgumentBuilder:

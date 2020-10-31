@@ -1,4 +1,4 @@
-from .ArgumentBuilder import ArgumentBuilder
+from .argument_builder import ArgumentBuilder
 
 
 class LiteralArgumentBuilder(ArgumentBuilder):

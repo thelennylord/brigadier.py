@@ -1,8 +1,8 @@
-from brigadier import StringReader
+from brigadier.string_reader import StringReader
 from brigadier.context import ParsedArgument
 from brigadier.exceptions import CommandSyntaxException
 
-from .CommandNode import CommandNode
+from .command_node import CommandNode
 
 
 class ArgumentCommandNode(CommandNode):

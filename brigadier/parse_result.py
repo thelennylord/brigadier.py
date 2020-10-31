@@ -1,4 +1,4 @@
-from brigadier.StringReader import StringReader
+from brigadier.string_reader import StringReader
 
 class ParseResult:
     def __init__(self, context, reader=StringReader(""), exceptions={}):

@@ -1,4 +1,4 @@
-from brigadier.StringReader import is_allowed_in_unquoted_string
+from brigadier.string_reader import is_allowed_in_unquoted_string
 
 
 SINGLE_WORD = "words_with_underscores",

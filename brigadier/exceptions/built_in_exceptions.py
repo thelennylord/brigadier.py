@@ -1,6 +1,6 @@
-from .DynamicCommandExceptionType import DynamicCommandExceptionType
-from .SimpleCommandExceptionType import SimpleCommandExceptionType
-from brigadier.LiteralMessage import LiteralMessage
+from .dynamic_command_exception import DynamicCommandExceptionType
+from .simple_command_exception import SimpleCommandExceptionType
+from brigadier.literal_message import LiteralMessage
 
 FLOAT_TOO_SMALL = DynamicCommandExceptionType(lambda found, minimum: LiteralMessage(f"Float must not be less than {minimum}, found {found}"))
 FLOAT_TOO_BIG = DynamicCommandExceptionType(lambda found, maximum: LiteralMessage(f"Float must not be more than {maximum}, found {found}"))

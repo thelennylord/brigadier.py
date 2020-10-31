@@ -5,9 +5,9 @@ from brigadier.exceptions import BuiltInExceptions, CommandSyntaxException
 from brigadier.suggestion import Suggestions, SuggestionsBuilder, empty_suggestion
 from brigadier.tree import RootCommandNode
 
-from .ParseResult import ParseResult
-from .ResultConsumer import ResultConsumer
-from .StringReader import StringReader
+from .parse_result import ParseResult
+from .result_consumer import ResultConsumer
+from .string_reader import StringReader
 
 ARGUMENT_SEPARATOR = " "
 ARGUMENT_SEPARATOR_CHAR = " "
