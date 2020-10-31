@@ -53,7 +53,6 @@ class CommandNode:
                 self.literals[node.get_name()] = node
             elif isinstance(node, ArgumentCommandNode):
                 self.arguments[node.get_name()] = node
-        self.children = dict(sorted(self.children.items(), key=lambda item: item[1]))
     
     def find_ambiguities(self, consumer):
         matches = []

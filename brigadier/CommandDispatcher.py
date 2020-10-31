@@ -42,8 +42,6 @@ class CommandDispatcher:
 
         if parse.get_reader().can_read():
             if len(parse.get_exceptions()) == 1:
-                # TODO: throw parse.getExceptions().values().iterator().next();
-                # throw parse.getExceptions().values().next().value;
                 raise list(parse.get_exceptions().values())[0]
             elif not parse.get_context().get_range():
                 raise BuiltInExceptions.dispatcher_unknown_command().create_with_context(parse.get_reader())
@@ -181,7 +179,7 @@ class CommandDispatcher:
         elif node.get_children():
             for child in node.get_children():
                 self.__get_all_usage(child, source, result, child.get_usage_text() if not prefix else prefix + ARGUMENT_SEPARATOR + child.get_usage_text(), restricted)
-        ####
+
         return result
     
     def get_smart_usage(self, node, source, optional, deep):

@@ -74,37 +74,37 @@ class StringReader:
             self.cursor = start
             raise BuiltInExceptions.reader_invalid_int().create_with_context(self, number)
         
-    def read_long(self):
-        # TODO: verify long
-        start = self.cursor
-        while self.can_read() and self.is_allowed_number(self.peek()):
-            self.skip()
+    # def read_long(self):
+    #     # TODO: verify long
+    #     start = self.cursor
+    #     while self.can_read() and self.is_allowed_number(self.peek()):
+    #         self.skip()
         
-        number = self.string[start:self.cursor]
-        if not number:
-            raise BuiltInExceptions.reader_expected_long().create_with_context(self)
+    #     number = self.string[start:self.cursor]
+    #     if not number:
+    #         raise BuiltInExceptions.reader_expected_long().create_with_context(self)
 
-        try:
-            return int(number)
-        except ValueError:
-            self.cursor = start
-            raise BuiltInExceptions.reader_invalid_long().create_with_context(self, number)
+    #     try:
+    #         return int(number)
+    #     except ValueError:
+    #         self.cursor = start
+    #         raise BuiltInExceptions.reader_invalid_long().create_with_context(self, number)
 
-    def read_double(self):
-        # TODO: verify double
-        start = self.cursor
-        while self.can_read() and self.is_allowed_number(self.peek()):
-            self.skip()
+    # def read_double(self):
+    #     # TODO: verify double
+    #     start = self.cursor
+    #     while self.can_read() and self.is_allowed_number(self.peek()):
+    #         self.skip()
         
-        number = self.string[start:self.cursor]
-        if not number:
-            raise BuiltInExceptions.reader_expected_double().create_with_context(self)
+    #     number = self.string[start:self.cursor]
+    #     if not number:
+    #         raise BuiltInExceptions.reader_expected_double().create_with_context(self)
         
-        try:
-            return float(number)
-        except ValueError:
-            self.cursor = start
-            raise BuiltInExceptions.reader_invalid_double().create_with_context(self, number)
+    #     try:
+    #         return float(number)
+    #     except ValueError:
+    #         self.cursor = start
+    #         raise BuiltInExceptions.reader_invalid_double().create_with_context(self, number)
     
     def read_float(self):
         start = self.cursor
@@ -192,4 +192,4 @@ class StringReader:
         self.skip()
 
 def is_allowed_in_unquoted_string(char):
-    return char >= '0' and char <= '9' or char >= 'A' and char <= 'Z' or char >= 'a' and char <= 'z' or char == '_' or char == '-' or char == '.' or char == '+'
+    return char.isalnum() or char == '_' or char == '-' or char == '.' or char == '+'
