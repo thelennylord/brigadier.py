@@ -44,7 +44,7 @@ dispatcher.register(
 )
 
 # Execute the command
-print(dispatcher.execute("pow 2", {}))
+print(dispatcher.execute("pow2 2", {}))
 print(dispatcher.execute("pow 3 4", {}))
 ```
 
@@ -55,11 +55,6 @@ from brigadier.builder import literal, argument
 from brigadier.suggestion import empty_suggestion
 
 class Vector3:
-    def __init__(self, x=None, y=None, z=None):
-        self.x = x
-        self.y = y
-        self.z = z
-    
     def parse(self, reader):
         self.x = reader.read_int()
         reader.skip()
@@ -85,7 +80,7 @@ def teleport_command(ctx):
 dispatcher = CommandDispatcher()
 dispatcher.register(
     literal("teleport").then(
-        argument("location", Vector3()).executes()
+        argument("location", Vector3()).executes(teleport_command)
     )
 )
 
