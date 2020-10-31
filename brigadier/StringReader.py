@@ -172,7 +172,7 @@ class StringReader:
     
     def read_boolean(self):
         start = self.cursor
-        value = self.read_string()
+        value = self.read_unquoted_string()
 
         if not value:
             raise BuiltInExceptions.reader_expected_bool().create_with_context(self)
