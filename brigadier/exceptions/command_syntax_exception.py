@@ -27,7 +27,7 @@ class CommandSyntaxException(Exception):
         if cursor > self.CONTEXT_AMOUNT:
             builder += "..."
 
-        builder += self.input[max(0, self.cursor - self.CONTEXT_AMOUNT):cursor]
+        builder += self.input[max(0, self.cursor - self.CONTEXT_AMOUNT):(cursor + 1)]
         builder += "<--[HERE]"
 
         return builder
