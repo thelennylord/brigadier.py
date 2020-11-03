@@ -46,8 +46,8 @@ class StringReader:
         self.cursor += 1
         return result
     
-    def skip(self):
-        self.cursor += 1
+    def skip(self, count=1):
+        self.cursor += count
 
     def is_allowed_number(self, char):
         return char >= '0' and char <= '9' or char == '.' or char == '-'
